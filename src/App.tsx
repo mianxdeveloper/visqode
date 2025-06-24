@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ScrollProgress from './components/ScrollProgress';
 import StickyButton from './components/StickyButton';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/project" element={<Projects />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

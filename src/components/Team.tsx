@@ -13,7 +13,7 @@ const Team: React.FC = () => {
     {
       name: 'Abdul Rehman',
       role: 'Creative Director',
-      image: 'https://media.licdn.com/dms/image/v2/D4D35AQH6WbMGuEVGIA/profile-framedphoto-shrink_800_800/B4DZYRe3zeHAAk-/0/1744050028097?e=1750809600&v=beta&t=jJ7HAmrzva4cEDW-F4Qda1PgqDVtG-WM5wvBwaQVrxk',
+      image: "../../public/ab.jpg",
       bio: 'Award-winning designer specializing in brand transformation.',
     },
     {
