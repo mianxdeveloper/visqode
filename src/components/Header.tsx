@@ -17,10 +17,10 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { name: 'About', href: '/#about' },
+    { name: 'About', href: '/visqode/#about' },
     { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/project' },
-    { name: 'Blog', href: '/#blog' },
+    { name: 'Blog', href: '/visqode/#blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
