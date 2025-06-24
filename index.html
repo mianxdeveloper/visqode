@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" href="/public/bolt.svg" type="image/x-icon" /> -->
+    <link rel="icon" type="image/svg+xml" href="/public/bolt.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visqode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        cursor: none !important;
+      }
+
+      .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: #39ff14;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: difference;
+        transition: transform 0.1s ease;
+      }
+
+      .custom-cursor.hover {
+        transform: scale(2);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white overflow-x-hidden">
+    <div class="custom-cursor"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Custom cursor
+      const cursor = document.querySelector(".custom-cursor");
+      let mouseX = 0;
+      let mouseY = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.left = mouseX + "px";
+        cursor.style.top = mouseY + "px";
+      });
+
+      document.addEventListener("mouseenter", () => {
+        cursor.style.opacity = "1";
+      });
+
+      document.addEventListener("mouseleave", () => {
+        cursor.style.opacity = "0";
+      });
+
+      // Hover effects
+      document.addEventListener("mouseover", (e) => {
+        if (e.target.matches("button, a, .hover-target")) {
+          cursor.classList.add("hover");
+        }
+      });
+
+      document.addEventListener("mouseout", (e) => {
+        if (e.target.matches("button, a, .hover-target")) {
+          cursor.classList.remove("hover");
+        }
+      });
+    </script>
+  </body>
+</html>
