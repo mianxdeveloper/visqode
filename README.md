@@ -22,4 +22,4 @@ Visqode is a modern, responsive web platform that showcases interactive content 
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/visqode.git
+   git clone https://github.com/mianxdeveloper/visqode.git
